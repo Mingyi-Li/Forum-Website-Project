@@ -1,0 +1,18 @@
+CREATE TABLE
+  users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL,
+    password TEXT NOT NULL,
+    online BOOLEAN DEFAULT 0
+  );
+
+CREATE TABLE
+  posts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    author TEXT,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users (id)
+  );

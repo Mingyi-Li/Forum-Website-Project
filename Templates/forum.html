@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Forum
+{% endblock %}
+
+{% block main %}
+
+    <head>
+        <h2>Forum</h2>
+    </head>
+
+    <body>
+        <div class="main-container">
+            <div class="article-container">
+            <!--posts-->
+                <div class="article-item">
+                <!--loop through all posts in table "posts"-->
+                    {% for post in posts %}
+                        <div class="article-item-info">
+                            <div class="article-info-author">{{ post.author }}</div>
+                            <div class="article-info-date">{{ post.time }}</div>
+                        </div>
+                        <h5>{{ post.title }}</h5>
+                        <p>{{ post.content }}</p>
+                        <div class="article-item-count"></div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </body>
+{% endblock %}

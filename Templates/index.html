@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    LHSS Blog
+{% endblock %}
+
+{% block main %}
+<!--title-->
+    <h2>Homepage</h2>
+<!--buttons-->
+    <button class="btn btn-primary" onclick="window.location.href='/forum'" method="GET">Forum</button>
+    <button class="btn btn-primary" onclick="window.location.href='/newPost'" method="GET">Create A Post</button>
+<!--online user table-->
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>Online Users</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for name in usernames %}
+                <tr>
+                    <td>{{ name.username }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

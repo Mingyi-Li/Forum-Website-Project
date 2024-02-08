@@ -1,0 +1,75 @@
+/* Layout title*/
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+
+/* Post */
+.article-item {
+    width: 80%;
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.article-item h2 {
+    color: var(--border-color);
+}
+
+.article-item-info {
+    display: flex;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.article-info-author, .article-info-date {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #ccc;
+}
+.article-info-author {
+    color: #999;
+}
+
+.article-item-count {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    column-gap: 20px;
+    color: #999;
+}
+
+.cyan {
+    color: #0284e0
+}
+
+table
+{
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

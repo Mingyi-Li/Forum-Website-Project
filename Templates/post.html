@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    newPost
+{% endblock %}
+
+{% block main %}
+
+    <head>
+        <h1 class="cyan">NEW POST</h1>
+    </head>
+
+    <body>
+    <!--User create new post here-->
+        <form action="/newPost" method="POST">
+            <div class="main-container">
+                <div class="creat-post">
+                    <h5>Write you ideas here</h5>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" name="inputPostTitle" placeholder="Title">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="inputPostContent" placeholder="Content">
+                            </td>
+                        </tr>
+                    </table>
+                    <p></p>
+                    <button id="publish" type="submit">Publish</button>
+                </div>
+            </div>
+            <p id="feedback1"></p>
+        </form>
+    </body>
+    <script>
+        document.querySelector("#publish").addEventListener('click', function() {
+            document.querySelector("#feedback1").innerHTML = 'Thank you for your contribution!';
+        });
+    </script>
+{% endblock %}
